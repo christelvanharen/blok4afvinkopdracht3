@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="Christel van Haren" content="Blok 4
+    Afvinkopdracht 3">
+    <title>Afvinkopdracht 3</title>
+    <link rel="stylesheet" href="/static/afvink3.css">
+</head>
+
+<body>
+    <h2>Zoeken in de gene table</h2>
+    <p>Op deze pagina staat een tabel van genen met de bijbehorende
+        beschrijving. In de zoekbalk kun je zoeken op een bepaald
+        trefwoord.
+    </p>
+
+    <form method="POST">
+        <p>
+            Zoek op een trefwoord:
+            <label>
+                <input type="text" name=zoek>
+                <button type="submit">Zoeken</button>
+            </label>
+        </p>
+
+    <h3>De genen met de bijbehorende beschrijving:
+    </h3>
+
+        {% for regel in database %}
+            <p> {{ regel }} <p>
+
+        {% endfor %}
+
+    </form>
+
+</body>
+</html>
